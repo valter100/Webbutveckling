@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title> Form </title>
+	<meta charset="UTF-8">
+
+</head>
+
+<body>
+  <form action = "http://webshare.mah.se/tszagh/response.php" method ="get"> <!-- Form tag that allows the user to send their responses to the given adress through the GET-method -->
+	<fieldset> <!-- creates an area for the "Personal information section of the form" -->
+		<legend>Personal information:</legend> <!-- The legends tag creates a caption for the fieldset tag area -->
+		<label for = "name">Full name:</label>
+		<input type = "text" id="name" name = "name" required><br><br> <!-- Input of type text, which allows the user to enter text into a field to answer the question -->
+		<label for = "age"> Age: </label>
+		<input type= "number" id="age" name = "age" min = "0" max = "120" required><br><br> <!-- Input of type number which only allows answers that consists of only numbers-->
+	</fieldset>
+	
+	<fieldset> <!-- Another area in the form -->
+		<legend> Your visits </legend> <!-- The name for the next area -->
+
+		<label> How often do you visit Blomstermålabladet?</label> <br>
+		<input type = "radio" id = "daily" name = "Frequency" value = "Daily" required> Every day <br> <!-- User checks one option between every option with the same name. Required forces the user to give an answer before submitting the form-->
+		<input type = "radio" id = "every_other_day" name = "Frequency" value = "Every other day"> Every other day <br>
+		<input type = "radio" id = "monthly" name = "Frequency" value = "Monthly"> Every week <br> <br>
+
+		<label> Which parts of Blomstermålabladet do you usually visit?</label> <br> <!-- Input of type checkbox allows the user to check all options that is true for them-->
+		<input type = "checkbox" id = "News" name = "Visits[]" value = "News"> News <br>
+		<input type = "checkbox" id = "Foreign" name = "Visits[]" value = "Foreign"> Foreign <br>
+		<input type = "checkbox" id = "Domestic" name = "Visits[]" value = "Domestic"> Domestic <br>
+		<input type = "checkbox" id = "Sport" name = "Visits[]" value = "Sport"> Sport <br>
+		<input type = "checkbox" id = "Gossip" name = "Visits[]" value = "Gossip"> Gossip <br>
+		<input type = "checkbox" id = "Weather" name = "Visits[]" value = "Weather"> Weather <br>
+		<input type = "checkbox" id = "Other" name = "Visits[]" value = "Other"> Other <br>
+
+	</fieldset>
+
+	<fieldset> <!-- third area of the form, contains some text areas for feedback aswell as a drop down menu-->
+		<legend> Win a T-shirt!</legend>
+		<label for = "Best"> What is the best thing about Blomstermålabladet?</label> <br>
+		<input type = "text" id = "Best" name = "Best"> <br>
+		<label for = "Worst"> What is the worst thing about Blomstermålabladet?</label> <br>
+		<input type = "text" id = "Worst" name = "Worst"> <br>
+		<label for = "Email"> What is your email adress?</label><br>
+		<input type = "Email" id = "Email" name = "Email"> <br>
+		<label for = "Size"> What is your t-shirt size?</label> <br>
+		<select name = "Size" id = "Size"> <!-- select tag creates a drop down menu with options created by the following "option" tags-->
+			<option value = "XS"> XS</option>
+			<option value = "S"> S</option>
+			<option value = "M" selected> M</option> <!-- Selected makes it so that the corresponding option is set as "defualt" on the drop down menu -->
+			<option value = "L"> L</option>
+			<option value = "XL"> XL</option>
+		</select>
+	</fieldset>
+
+	<fieldset>
+		<legend> Buttons! </legend>
+		<input type= "reset" value = "Reset"> <!-- Input of type "reset" will set all of the forms input elements to their default value-->
+		<input type= "submit" value = "Submit"><!-- Input of type "submit" will send all of the provided information to the adress set in the form tag-->
+
+	</fieldset>
+  </form>
+</body>
+
+</html>
